@@ -13,14 +13,17 @@ function App() {
         //setToDos((currentArray) => [...currentArray, toDo]); // 이렇게도 가능
         setToDo("");
     };
-    console.log(toDos);
     return (
         <div>
-            <h1>My To Dos {toDos}</h1>
+            <h1>My To Dos {toDos.length}</h1>
             <form onSubmit={onSubmit}>
                 <input onChange={onChange} value={toDo} text="text" placeholder="Write your to do..."></input>
                 <button>Add To Do</button>
             </form>
+            <hr />
+            {toDos.map((item, index) => (
+                <li key={index}>{item}</li>
+            ))}
         </div>
     );
 }
