@@ -1,4 +1,4 @@
-import Movie from "../componets/Movie";
+import Movies from "../componets/Movies";
 import { useState, useEffect } from "react";
 
 function Home() {
@@ -20,7 +20,7 @@ function Home() {
             ) : (
                 <div>
                     {movies.map((movie) => (
-                        <Movie
+                        <Movies
                             id={movie.id}
                             key={movie.id}
                             coverImg={movie.medium_cover_image}
