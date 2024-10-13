@@ -3,9 +3,6 @@ import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 
 const router = createBrowserRouter(
-    {
-        basename: "/react-for-beginners",
-    },
     [
         {
             path: "/",
@@ -15,7 +12,10 @@ const router = createBrowserRouter(
             path: "/movie/:id",
             element: <Detail />,
         },
-    ]
+    ],
+    {
+        basename: "/react-for-beginners",
+    }
 );
 function App() {
     console.log(router);
